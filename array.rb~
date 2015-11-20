@@ -20,8 +20,8 @@ class Array
     nom_methode = "#{id}"
 	if nom_methode =~ /= $ /
 		id = nom_methode . chop . to_sym
-		#definir_reader_et_writer ( id )
-		#set_attribut id , args [0]
+		definir_reader_et_writer ( id )
+		set_attribut id , args [0]
 	else
 		raise NoMethodError , " Methode non - definie ‘#{ id} ’ pour #{ self }", caller (1)
 	end
